@@ -21,7 +21,7 @@ FROM maven:3-jdk-8-slim as builder
 
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get -qq update \
-    && apt-get -qq -y install --no-install-recommends python3 python3-yaml
+    && apt-get -qq -y install --no-install-recommends python3 python3-yaml curl
 
 COPY . /src
 WORKDIR /src
