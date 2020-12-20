@@ -25,7 +25,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
 COPY . /src
 WORKDIR /src
-RUN mvn -B -ff -q dependency:go-offline \
+RUN mvn -B -ff dependency:go-offline \
       install \
       -Pdist,bundle-contrib-exts \
       -Pskip-static-checks,skip-tests \
