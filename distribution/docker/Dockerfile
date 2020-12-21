@@ -58,4 +58,6 @@ USER druid
 VOLUME /opt/druid/var
 WORKDIR /opt/druid
 
+RUN aws s3 cp s3://bootstrap-software/mysql-connector-java-5.1.48.jar /opt/druid/extensions/mysql-metadata-storage/
+
 ENTRYPOINT ["/druid.sh"]
